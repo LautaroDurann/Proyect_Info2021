@@ -21,4 +21,5 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
     path('posts/', include('apps.posts.urls')),
+    path('', include('apps.user.urls')),
 ]

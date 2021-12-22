@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="col d-flex justify-content-center align-items-center ">
+	<form method="post" class="col-8" novalidate>
+		{% csrf_token %}
+
+		<div class="row">
+			<div class="col-6">
+				{{form.titulo}}
+			</div>
+		</div>
+				{{form.contenido}}
+		
+		<input class="btn btn-primary btn-lg" type="submit" class="btn btn-info" value="Modificar">
+		<a class="btn btn-primary btn-lg" href="{% url 'lista'%}" role="button">Volver</a>
+	</form>
+</div>
+{% endblock %}
